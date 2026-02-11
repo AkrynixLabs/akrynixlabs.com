@@ -1,3 +1,5 @@
+"use client";
+
 import Layout from "@/components/layout";
 import Link from "next/link";
 
@@ -14,19 +16,19 @@ export default function Home() {
       {/* Hero (muted surface) */}
       <Section tone="muted">
         <div className="max-w-3xl">
-          <Badge>Web • Mobile • Cloud • Systems</Badge>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <Badge>Web • Mobile • Cloud • AI • Systems</Badge>
+          </div>
 
-          <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-6xl">
+          <h1 className="mt-6 text-5xl font-bold tracking-tight md:text-7xl animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-150 text-neutral-900">
             Technology & Systems Engineering Lab
           </h1>
 
-          <p className="mt-6 text-lg text-neutral-600">
-            Akrynix Labs designs and operates modern digital systems across web,
-            mobile, cloud, and infrastructure — with a focus on long-term
-            reliability and scale.
+          <p className="mt-8 text-xl text-neutral-600 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
+            Akrynix Labs is a technology and systems engineering lab focused on designing, building, and operating modern digital systems across web platforms, mobile systems, cloud infrastructure, AI integration, and long-term operations — with a focus on systems-first thinking and architectural clarity.
           </p>
 
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-12 flex flex-col gap-4 sm:flex-row animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500">
             <Link href="/contact">
               <Button>Book a consultation</Button>
             </Link>
@@ -35,42 +37,58 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
-            <Stat label="Delivery" value="Milestone-based" />
-            <Stat label="Build" value="Product-grade" />
-            <Stat label="Focus" value="Reliability" />
-            <Stat label="Scale" value="Cloud-ready" />
+          <div className="mt-16 grid grid-cols-2 gap-6 md:grid-cols-4 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-700">
+            <div className="group hover:scale-110 hover:bg-neutral-100 transition-all duration-300 cursor-pointer rounded-lg p-2">
+              <Stat label="Approach" value="Systems-first" />
+            </div>
+            <div className="group hover:scale-110 hover:bg-neutral-100 transition-all duration-300 cursor-pointer rounded-lg p-2">
+              <Stat label="Design" value="Long-term" />
+            </div>
+            <div className="group hover:scale-110 hover:bg-neutral-100 transition-all duration-300 cursor-pointer rounded-lg p-2">
+              <Stat label="Focus" value="Architecture" />
+            </div>
+            <div className="group hover:scale-110 hover:bg-neutral-100 transition-all duration-300 cursor-pointer rounded-lg p-2">
+              <Stat label="Scale" value="By design" />
+            </div>
           </div>
         </div>
       </Section>
 
       {/* Capabilities (light surface) */}
       <Section>
-        <div className="max-w-3xl">
-          <h2 className="text-2xl font-semibold tracking-tight">Capabilities</h2>
-          <p className="mt-3 text-neutral-600">
+        <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-1000">
+          <h2 className="text-3xl font-bold tracking-tight text-neutral-900">Capabilities</h2>
+          <p className="mt-4 text-lg text-neutral-600 leading-relaxed">
             We engineer systems that are easy to evolve, observe, and operate —
             not just build-and-abandon projects.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-2">
-          <Card
-            title="Product-grade web platforms"
-            desc="Marketing sites, dashboards, portals, and internal tools with performance, accessibility, and maintainability built in."
-          />
-          <Card
-            title="Systems architecture"
-            desc="Pragmatic system design and engineering decisions that reduce rewrite cycles and improve long-term velocity."
-          />
-          <Card
-            title="Cloud infrastructure & DevOps"
-            desc="Deployments, CI/CD, observability, and security-first practices to keep systems stable in production."
-          />
-          <Card
-            title="Technical consulting"
-            desc="Reviews, audits, and roadmaps — high-signal guidance to help teams move faster with fewer mistakes."
-          />
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-150 hover:scale-105 hover:-translate-y-2 hover:bg-neutral-100 transition-all duration-300 cursor-pointer rounded-xl">
+            <Card
+              title="Product-grade web platforms"
+              desc="Marketing sites, dashboards, portals, and internal tools with performance, accessibility, and maintainability built in."
+            />
+          </div>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300 hover:scale-105 hover:-translate-y-2 hover:bg-neutral-100 transition-all duration-300 cursor-pointer rounded-xl">
+            <Card
+              title="Systems architecture"
+              desc="Pragmatic system design and engineering decisions that reduce rewrite cycles and improve long-term velocity."
+            />
+          </div>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-450 hover:scale-105 hover:-translate-y-2 hover:bg-neutral-100 transition-all duration-300 cursor-pointer rounded-xl">
+            <Card
+              title="Cloud infrastructure & DevOps"
+              desc="Deployments, CI/CD, observability, and security-first practices to keep systems stable in production."
+            />
+          </div>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-600 hover:scale-105 hover:-translate-y-2 hover:bg-neutral-100 transition-all duration-300 cursor-pointer rounded-xl">
+            <Card
+              title="AI integration"
+              desc="Intelligent systems, machine learning pipelines, and AI-powered features built with scalability and reliability."
+            />
+          </div>
         </div>
       </Section>
 
@@ -98,7 +116,7 @@ export default function Home() {
             <Mini
               tone="dark"
               title="Operations matter"
-              desc="If you can’t observe it, you can’t trust it."
+              desc="If you can't observe it, you can't trust it."
             />
             <Mini
               tone="dark"
@@ -116,12 +134,12 @@ export default function Home() {
 
       {/* CTA (muted surface) */}
       <Section tone="muted">
-        <div className="rounded-3xl border border-neutral-200 bg-white p-10 md:p-14">
+        <div className="rounded-3xl border border-neutral-200 bg-gradient-to-br from-neutral-50 to-neutral-100 p-10 md:p-14 animate-in fade-in slide-in-from-bottom-4 duration-700 hover:shadow-2xl hover:bg-neutral-200 transition-all duration-300">
           <h2 className="text-3xl font-semibold tracking-tight text-neutral-900">
             Ready to build something reliable?
           </h2>
           <p className="mt-3 max-w-2xl text-neutral-600">
-            Share your idea or your current system. We’ll suggest the simplest
+            Share your idea or your current system. We'll suggest the simplest
             path to a scalable, maintainable implementation.
           </p>
 
@@ -129,7 +147,7 @@ export default function Home() {
             <Link href="/contact">
               <Button>Start a project</Button>
             </Link>
-            <a href="mailto:hello@akrynixlabs.com">
+            <a href="mailto:akrynixlabs@gmail.com">
               <Button variant="secondary">Email us</Button>
             </a>
           </div>

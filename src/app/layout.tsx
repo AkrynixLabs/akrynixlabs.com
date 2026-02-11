@@ -16,7 +16,12 @@ export const metadata = {
   description: "Akrynix Labs is a technology and systems engineering lab\
    designing scalable, reliable digital systems across web, mobile, and cloud.",
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      { url: "/assets/logo.png", sizes: "any" },
+      { url: "/assets/logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/assets/logo.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/assets/logo.png",
   },
   openGraph: {
     title: "Akrynix Labs",
